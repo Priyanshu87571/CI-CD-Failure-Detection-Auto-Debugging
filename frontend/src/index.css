@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: dark;
+  }
+
+  html {
+    min-width: 320px;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    min-height: 100vh;
+    background: radial-gradient(ellipse at 15% 0%, rgba(16, 185, 129, 0.055), transparent 34%), #090d16;
+    color: #e2e8f0;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  button, input, select, textarea {
+    font: inherit;
+  }
+
+  button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visible, select:focus-visible {
+    outline: 2px solid #34d399;
+    outline-offset: 3px;
+  }
+
+  ::selection {
+    background: rgba(52, 211, 153, 0.25);
+    color: #f8fafc;
+  }
+}
+
+/* Custom developer dashboard scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #090d16;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1f2a40;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #2d3d5f;
+}
+
+/* Code & diff styling */
+.code-font {
+  font-family: 'JetBrains Mono', 'Fira Code', Consolas, monospace;
+}
+
+.diff-add {
+  background-color: rgba(16, 185, 129, 0.15);
+  color: #34d399;
+  border-left: 3px solid #10b981;
+}
+
+.diff-del {
+  background-color: rgba(244, 63, 94, 0.15);
+  color: #fb7185;
+  border-left: 3px solid #f43f5e;
+}
+
+.diff-hunk {
+  background-color: rgba(99, 102, 241, 0.1);
+  color: #a5b4fc;
+}
+
+/* Glassmorphism accents */
+.glass-panel {
+  background: rgba(16, 23, 38, 0.85);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(31, 42, 64, 0.8);
+}

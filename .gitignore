@@ -1,0 +1,19 @@
+@"
+.env
+.env.*
+!.env.example
+.venv/
+venv/
+node_modules/
+dist/
+build/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+.vscode/
+"@ | Set-Content -Encoding utf8 .gitignore
+deployguard.db
+*.db
